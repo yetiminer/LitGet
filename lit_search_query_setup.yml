@@ -1,0 +1,91 @@
+scopus: 
+    standard: 
+        start: startIndex
+        query: query
+        api_key: apikey
+        num_per_page: None
+    additional: 
+        httpAccept: 'application/json'
+        cursor: '*'
+        view: COMPLETE
+        
+scienceDirect:
+    standard: 
+        start: start
+        query: query
+        api_key: apiKey
+        num_per_page: None
+
+    
+        
+ieeexplore: 
+    standard: 
+        start: start_record
+        query: abstract
+        api_key: apikey
+        num_per_page: None
+    additional:
+        content_type: 'Conferences, Journals & Magazines'
+        
+springernature:
+    standard:
+        start: s
+        query: q
+        api_key: api_key
+        num_per_page: num_results_page
+        
+plos: 
+    standard: 
+        start: start_num
+        query: q
+        api_key: apikey
+        num_per_page: None
+arxiv:
+    standard:
+        start: start
+        query: search_query
+        api_key: None
+        num_per_page: max_results
+    
+    query_prepend: 'all:'
+    namespaces:
+        openSearch: 'http://a9.com/-/spec/opensearch/1.1/'
+        atom: 'http://www.w3.org/2005/Atom'
+        arxivAtom: 'http://arxiv.org/schemas/atom'
+        
+    col_dic:
+         id: './/atom:id'
+         updated: './/atom:updated'
+         published: './/atom:published'
+         title: './/atom:title'
+         summary: './/atom:summary'
+         author: './/atom:name'
+         comment: './/arxivAtom:comment'
+         link: './/atom:link'
+         primary_category: './/arxivAtom:primary_category'
+         category: './/atom:category'
+    
+    
+wiley:
+    standard:
+         start: startRecord
+         query: query
+         api_key: None
+         num_per_page: maximumRecords
+         
+    namespaces:
+        dc: 'http://purl.org/dc/elements/1.1/'
+        oasis: 'http://docs.oasis-open.org/ns/search-ws/sruResponse'
+        prism: 'http://prismstandard.org/namespaces/basic/2.1/'
+        purl: 'http://purl.org/dc/terms/'
+        response: 'http://docs.oasis-open.org/ns/search-ws/sruResponse'
+        
+    col_dic:
+        title: './/dc:title'
+        date: './/dc:date'
+        journal: './/purl:isPartOf'
+        authors: './/dc:contributor'
+        doi': './/dc:identifier'
+        abstract: './/dc:description'
+        url: './/prism:url'
+    

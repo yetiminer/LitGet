@@ -1,0 +1,24 @@
+scopus: #https://dev.elsevier.com/tips/ScopusSearchTips.htm
+       query: 'TITLE-ABS-KEY("market manipulation")'
+       SRCTYPE: j OR p OR b
+
+scienceDirect: #https://dev.elsevier.com/tecdoc_sdsearch_migration.html
+       query: 'qs:"market manipulation"'
+       
+ieeexplore:
+        query: "market manipulation"
+        content_type: 'Conferences, Journals & Magazines'
+
+springernature:
+        query: "market manipulation"
+
+plos:
+        query: "market manipulation"
+
+arxiv:
+        query: 'all:"market manipulation"'
+
+wiley:
+        query: 'dc.description="market manipulation"'
+       
+
